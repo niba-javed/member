@@ -1,0 +1,17 @@
+{% extends 'master.html'%}
+{% block title%}
+    list of all members
+{% endblock %}
+
+
+{% block content %}
+    <h1 class ="text-success">users list</h1>
+    <ul class="bg-warning">
+         {%for x in users%}
+         <li> <a href="details/{{x.id}}">{{x.name}}</a> </li>
+         {% endfor %}
+    </ul>
+
+
+    <p>niba ajar shahzadi malaika</p>
+{% endblock %}

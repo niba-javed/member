@@ -1,0 +1,26 @@
+{% extends 'master.html' %}
+{% block title %}
+    testing page 
+{% endblock %}
+
+
+
+{% block content %}
+    <table border =1>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    {% for x in mymembers %}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.age}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    <P>in views.py you can see how to import and fetch members from the table</P>
+
+    {% endblock %}
